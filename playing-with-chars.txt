@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #define MAX_LEN 30
 
-
+//Using a whitespace character in scanf() would ignore any number of whitespace characters left in the input stream
 
 int main() 
 {
@@ -20,7 +20,7 @@ int main()
 } 
 
 -----------------------------------------------------------------------
-ASM Dump: Compiled using x86-64 GCC with no optimization options on godbolt compiler explorer..
+//ASM Dump: Compiled using x86-64 GCC with no optimization options on godbolt compiler explorer
 
 .LC0:
         .string " %c%s"
@@ -80,7 +80,7 @@ int main()
     return 0;
 }
 -----------------------------------------
-#ASM dump for 2nd solution same compiler and options as before
+//ASM dump for 2nd solution same compiler and options as before
 
 .LC0:
         .string "%c"
