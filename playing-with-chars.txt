@@ -55,7 +55,7 @@ main:
         leave
         ret
     ------------------------------------------------------------------------------
-    #2nd solution 
+    // 2nd solution that I pulled from some article I don't remember where.
     
 // Playing With Characters - Hacker Rank Solution
 #include <stdio.h>
