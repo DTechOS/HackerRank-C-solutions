@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #define MAX_LEN 30
 
+//1st solution
 //Using a whitespace character in scanf() would ignore any number of whitespace characters left in the input stream
 
 int main() 
