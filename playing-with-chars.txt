@@ -9,7 +9,8 @@
 int main() 
 {
     
-    char ch,s[MAX_LEN],sen[MAX_LEN];
+    char ch;
+    char s[MAX_LEN],sen[MAX_LEN];
     scanf(" %c%s", &ch,&s);
     scanf(" %[^\n]%*c",sen);
     printf("%c\n%s\n%s",ch,s,sen);
