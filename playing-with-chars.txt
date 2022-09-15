@@ -2,17 +2,14 @@
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
-#define MAX_LEN 100
+#define MAX_LEN 30
 
 
-#1st solution
-#Using a whitespace character in scanf() would ignore any number of whitespace characters left in the input stream
 
 int main() 
 {
     
-    char ch;
-    char s[MAX_LEN],sen[MAX_LEN];
+    char ch,s[MAX_LEN],sen[MAX_LEN];
     scanf(" %c%s", &ch,&s);
     scanf(" %[^\n]%*c",sen);
     printf("%c\n%s\n%s",ch,s,sen);
@@ -20,6 +17,7 @@ int main()
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
     return 0;
 } 
+
 -----------------------------------------------------------------------
 ASM Dump: Compiled using x86-64 GCC with no optimization options on godbolt compiler explorer..
 
@@ -32,22 +30,22 @@ ASM Dump: Compiled using x86-64 GCC with no optimization options on godbolt comp
 main:
         push    rbp
         mov     rbp, rsp
-        sub     rsp, 224
-        lea     rdx, [rbp-112]
+        sub     rsp, 64
+        lea     rdx, [rbp-32]
         lea     rax, [rbp-1]
         mov     rsi, rax
         mov     edi, OFFSET FLAT:.LC0
         mov     eax, 0
         call    __isoc99_scanf
-        lea     rax, [rbp-224]
+        lea     rax, [rbp-64]
         mov     rsi, rax
         mov     edi, OFFSET FLAT:.LC1
         mov     eax, 0
         call    __isoc99_scanf
         movzx   eax, BYTE PTR [rbp-1]
         movsx   eax, al
-        lea     rcx, [rbp-224]
-        lea     rdx, [rbp-112]
+        lea     rcx, [rbp-64]
+        lea     rdx, [rbp-32]
         mov     esi, eax
         mov     edi, OFFSET FLAT:.LC2
         mov     eax, 0
