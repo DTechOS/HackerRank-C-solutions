@@ -32,8 +32,7 @@ void calculate_the_maximum(int n, int k) {
             
             {
                 XOR_max = xor;
-            }   
-            
+            }             
         }
     }    
     
